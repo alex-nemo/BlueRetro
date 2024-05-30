@@ -43,7 +43,8 @@ void IRAM_ATTR para_1p_init_buffer(int32_t dev_mode, struct wired_data *wired_da
     struct para_1p_map *map_mask = (struct para_1p_map *)wired_data->output_mask;
 
     map->buttons = 0xFFFDFFFF;
-    map->buttons_high = 0xFFFFFFFF;
+//    map->buttons_high = 0xFFFFFFFF;
+    map->buttons_high = 0x00000000; // Test for inverse OUTputs.
     map_mask->buttons = 0;
     map_mask->buttons_high = 0;
 }
